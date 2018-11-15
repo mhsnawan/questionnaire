@@ -18,6 +18,10 @@ import {
   MatInputModule,
   MatRippleModule,
   MatTooltipModule,
+  MatTableModule,
+  MatTableDataSource,
+  MatSortModule,
+  MatPaginatorModule,
 } from '@angular/material';
 @NgModule({
   imports: [
@@ -28,6 +32,9 @@ import {
     MatRippleModule,
     MatInputModule,
     MatTooltipModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
   ],
   declarations: [
     DashboardComponent,
