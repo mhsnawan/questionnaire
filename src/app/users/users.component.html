@@ -10,14 +10,11 @@
                   <div class="card-body">
                     <div class="mat-elevation-z8">
                         <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
-
-                            <!--- Note that these columns can be defined in any order.
-                                  The actual rendered columns are set as a property on the row definition" -->
-                          
+                            
                             <!-- Position Column -->
-                            <ng-container matColumnDef="position">
+                            <ng-container matColumnDef="ID">
                               <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>>
-                              <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>>
+                              <mat-cell *matCellDef="let element"> {{element.ID}} </mat-cell>>
                             </ng-container>
                           
                             <!-- Name Column -->
@@ -27,9 +24,9 @@
                             </ng-container>
                           
                             <!-- Weight Column -->
-                            <ng-container matColumnDef="weight">
+                            <ng-container matColumnDef="email">
                               <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-                              <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>>
+                              <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>>
                             </ng-container>
                           
                             <!-- Symbol Column -->

@@ -24,8 +24,6 @@ import {
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { MatTableModule } from '@angular/material';
-import { AdminComponent } from './admin/admin.component';
-
 
 
 @NgModule({
@@ -45,8 +43,6 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     AppComponent,
     AdminLayoutComponent,
-    AdminComponent,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

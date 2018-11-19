@@ -12,6 +12,7 @@ import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { UsersComponent } from '../../users/users.component';
+import { AdminComponent } from '../../admin/admin.component';
 
 import {
   MatButtonModule,
@@ -23,6 +24,7 @@ import {
   MatSortModule,
   MatPaginatorModule,
 } from '@angular/material';
+import { ManageQuestionnaireComponent } from 'app/manage-questionnaire/manage-questionnaire.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -46,6 +48,8 @@ import {
     NotificationsComponent,
     UpgradeComponent,
     UsersComponent,
+    AdminComponent,
+    ManageQuestionnaireComponent
   ]
 })
 
