@@ -3,17 +3,9 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutRoutes } from './admin-layout.routing';
-import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { UserProfileComponent } from '../../user-profile/user-profile.component';
-import { TableListComponent } from '../../table-list/table-list.component';
-import { TypographyComponent } from '../../typography/typography.component';
-import { IconsComponent } from '../../icons/icons.component';
-import { MapsComponent } from '../../maps/maps.component';
-import { NotificationsComponent } from '../../notifications/notifications.component';
-import { UpgradeComponent } from '../../upgrade/upgrade.component';
-import { UsersComponent } from '../../users/users.component';
-import { AdminComponent } from '../../admin/admin.component';
-
+import { ComponentsModule } from 'app/components/components.module';
+import { ManageQuestionnaireModule } from 'app/manage-questionnaire/manage-questionnaire.module';
+import { UsersComponent } from 'app/users/users.component';
 import {
   MatButtonModule,
   MatInputModule,
@@ -24,7 +16,9 @@ import {
   MatSortModule,
   MatPaginatorModule,
 } from '@angular/material';
-import { ManageQuestionnaireComponent } from 'app/manage-questionnaire/manage-questionnaire.component';
+import { UserProfileComponent } from 'app/user-profile/user-profile.component';
+
+
 @NgModule({
   imports: [
     CommonModule,
@@ -35,21 +29,14 @@ import { ManageQuestionnaireComponent } from 'app/manage-questionnaire/manage-qu
     MatInputModule,
     MatTooltipModule,
     MatTableModule,
+    ManageQuestionnaireModule,
+    ComponentsModule,
     MatSortModule,
     MatPaginatorModule,
   ],
   declarations: [
-    DashboardComponent,
-    UserProfileComponent,
-    TableListComponent,
-    TypographyComponent,
-    IconsComponent,
-    MapsComponent,
-    NotificationsComponent,
-    UpgradeComponent,
     UsersComponent,
-    AdminComponent,
-    ManageQuestionnaireComponent
+    UserProfileComponent
   ]
 })
 

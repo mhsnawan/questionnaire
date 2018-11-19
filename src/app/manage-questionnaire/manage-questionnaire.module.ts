@@ -18,10 +18,12 @@ import {
   MatDatepickerModule,
   MatTabsModule,
 } from '@angular/material';
+import { ManageQuestionnaireComponent } from './manage-questionnaire.component';
 
 @NgModule({
   declarations: [
-    EditQuestionnaireComponent
+    EditQuestionnaireComponent,
+    ManageQuestionnaireComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +43,8 @@ import {
       MatTooltipModule,
   ],
   exports:[
-    EditQuestionnaireComponent
+    EditQuestionnaireComponent,
+    ManageQuestionnaireComponent
   ]
 })
 export class ManageQuestionnaireModule { }
