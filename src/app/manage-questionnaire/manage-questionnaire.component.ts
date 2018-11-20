@@ -20,7 +20,7 @@ export class ManageQuestionnaireComponent{
 
    ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-}
+  }
 
   EditQuestionnaire(){
 
