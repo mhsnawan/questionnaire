@@ -18,6 +18,7 @@ export const ROUTES: RouteInfo[] = [
     // { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
     { path: '/manage-questionnaire', title: 'Questionnaires',  icon: 'question_answer', class: '' },
     { path: '/users', title: 'Users',  icon: 'person', class: '' },
+    { path: '/admin', title: 'Admin',  icon: 'verified_user', class: '' },
     
 ];
 

@@ -17,6 +17,7 @@ import {
   MatPaginatorModule,
 } from '@angular/material';
 import { UserProfileComponent } from 'app/user-profile/user-profile.component';
+import { AdminComponent } from '../../admin/admin.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { UserProfileComponent } from 'app/user-profile/user-profile.component';
   ],
   declarations: [
     UsersComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    AdminComponent,
   ]
 })
 
