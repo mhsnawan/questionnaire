@@ -20,6 +20,7 @@ import {
 import { UserProfileComponent } from 'app/user-profile/user-profile.component';
 import { AdminComponent } from '../../admin/admin.component';
 import { UsersModule } from '../../users/users.module';
+import { AdminModule } from '../../admin/admin.module';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { UsersModule } from '../../users/users.module';
     MatTooltipModule,
     MatTableModule,
     ManageQuestionnaireModule,
+    AdminModule,
     UsersModule,
     ComponentsModule,
     MatSortModule,
@@ -41,7 +43,6 @@ import { UsersModule } from '../../users/users.module';
   ],
   declarations: [
     UserProfileComponent,
-    AdminComponent,
   ]
 })
 
