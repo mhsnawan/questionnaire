@@ -1,76 +1,63 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8">
-                <div class="card">
+            <div class="col-md-12">
+                <div class="card card-plain">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title">Edit Profile</h4>
-                        <p class="card-category">Complete your profile</p>
+                        <h4 class="card-title mt-0">Admins</h4>
+                        <p class="card-category"> </p>
                     </div>
                     <div class="card-body">
-                        <form>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="First Name" type="text">
-                                </mat-form-field>
-                              </div>
-                              <div class="col-md-6">
-                                <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Last Name" type="text">
-                                </mat-form-field>
-                              </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                      <input matInput placeholder="Username">
-                                    </mat-form-field>
+                        <mat-tab-group [selectedIndex] = "selectedIndex">
+                            <mat-tab label="Admins">
+                                <div class="mat-elevation-z8">
+                                    <mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
+                                        
+                                        <!-- Position Column -->
+                                        <ng-container matColumnDef="ID">
+                                        <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>>
+                                        <mat-cell *matCellDef="let element"> {{element.ID}} </mat-cell>>
+                                        </ng-container>
+            
+                                        <!-- Weight Column -->
+                                        <ng-container matColumnDef="email">
+                                        <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+                                        <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>>
+                                        </ng-container>
+                                    
+                                        <!-- Symbol Column -->
+                                        <ng-container matColumnDef="symbol">
+                                        <mat-header-cell *matHeaderCellDef> Action </mat-header-cell>>
+                                        <mat-cell *matCellDef="let element">
+                                            <a data-toggle="modal" data-target="#view-questionnaire"><i class="material-icons edit">edit</i></a>
+                                            <a (click)="deleteuser(element._id);"><i class="material-icons delete">delete</i></a>
+                                        </mat-cell>>
+                                        </ng-container>
+                                    
+                                        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>>
+                                        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>>
+                                    
+                                    </mat-table>
+                                
+                                    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
                                 </div>
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                      <input matInput placeholder="Email address" type="email">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                  <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="Old Password" type="password">
-                                  </mat-form-field>
-                              </div>
-                              <div class="col-md-6">
-                                  <mat-form-field class="example-full-width">
-                                    <input matInput placeholder="New Password" type="password">
-                                  </mat-form-field>
-                              </div>
-                            </div>
-                
-                            
-                            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
-                            <div class="clearfix"></div>
-                        </form>
+                            </mat-tab>
+                            <mat-tab label="Add Admin">
+                                <app-add-admin 
+                                (selectedind) = "selectindex($event)"
+                                ></app-add-admin>
+                            </mat-tab>
+                            <mat-tab label="Edit Admin">
+                                <app-edit-admin 
+                                (selectedind) = "selectindex($event)"
+                                ></app-edit-admin>
+                            </mat-tab>
+                        </mat-tab-group>
+                        
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="#pablo">
-                            <img class="img" src="../assets/img/faces/marc.jpg" />
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                        <h4 class="card-title">Alec Thompson</h4>
-                        <p class="card-description">
-                            Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                        </p>
-                        <a href="#pablo" class="btn btn-danger btn-round">Follow</a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
-  </div>
-  
+</div>
+      
