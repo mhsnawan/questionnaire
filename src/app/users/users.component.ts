@@ -10,6 +10,8 @@ import {MatTableDataSource, MatPaginator } from '@angular/material';
 export class UsersComponent implements OnInit {
   displayedColumns: string[] = ['ID', 'name', 'email', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+  displayTab = false;
+  selectedIndex = 0;
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -24,6 +26,14 @@ export class UsersComponent implements OnInit {
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+  }
+
+  displayEditTab(f: boolean) {
+    this.displayTab = f;
+  }
+  selectindex(index: number) {
+    console.log('select index', index);
+    this.selectedIndex = index;
   }
 
 }

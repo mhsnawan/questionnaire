@@ -15,9 +15,11 @@ import {
   MatTableDataSource,
   MatSortModule,
   MatPaginatorModule,
+  MatTabsModule,
 } from '@angular/material';
 import { UserProfileComponent } from 'app/user-profile/user-profile.component';
 import { AdminComponent } from '../../admin/admin.component';
+import { UsersModule } from '../../users/users.module';
 
 
 @NgModule({
@@ -31,12 +33,13 @@ import { AdminComponent } from '../../admin/admin.component';
     MatTooltipModule,
     MatTableModule,
     ManageQuestionnaireModule,
+    UsersModule,
     ComponentsModule,
     MatSortModule,
     MatPaginatorModule,
+    MatTabsModule,
   ],
   declarations: [
-    UsersComponent,
     UserProfileComponent,
     AdminComponent,
   ]
